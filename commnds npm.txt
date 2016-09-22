@@ -1,0 +1,5 @@
+npm install mocha --save-dev
+npm install supertest --save-dev
+npm install socket.io -save
+
+Pesquise como fazer a mesma query de uma maneira mais rápida utilizando a lib node-database-cleaner

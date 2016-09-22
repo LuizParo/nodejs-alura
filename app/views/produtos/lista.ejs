@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <table border="1px">
+            <tr>
+                <td>Id</td>
+                <td>Titulo</td>
+                <td>Descricao</td>
+                <td>Preço</td>
+                <td>Acao</td>
+            </tr>
+            <% for(var i = 0; i < lista.length; i++) {%>
+                <tr>
+                    <td><%= lista[i].id %></td>
+                    <td><%= lista[i].titulo %></td>
+                    <td><%= lista[i].descricao %></td>
+                    <td><%= lista[i].preco %></td>
+                    <td>
+                        <form action="/produtos?_method=DELETE" method="post">
+                            <input type="hidden" name="id" value="<%= lista[i].id %>" />
+                            <input type="submit" value="Apaga" />
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    </body>
+</html>
